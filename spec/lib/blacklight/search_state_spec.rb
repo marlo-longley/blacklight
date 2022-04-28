@@ -421,7 +421,7 @@ RSpec.describe Blacklight::SearchState do
       it 'maps the pivot matching param pivot_field' do
         blacklight_config.add_facet_field 'some_key', pivot: %w[pivot_field_1 pivot_field_2]
         expect(search_state.filters.count).to eq(1)
-        expect(search_state.filters.first.key).to eq('pivot_field_1')
+        expect(search_state.filters.first.key).to eq('some_key')
       end
     end
 
